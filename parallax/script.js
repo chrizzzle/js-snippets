@@ -1,29 +1,37 @@
 var ticking = false;
-var secondSlide = document.querySelector('.slide.second');
-var thirdSlide = document.querySelector('.slide.third');
-var fourthSlide = document.querySelector('.slide.fourth');
-var fifthSlide = document.querySelector('.slide.fifth');
-var sixthSlide = document.querySelector('.slide.sixth');
-var seventhSlide = document.querySelector('.slide.seventh');
+var circle1 = document.querySelector('#circle1');
+var circle2 = document.querySelector('#circle2');
+var circle3 = document.querySelector('#circle3');
+var circle4 = document.querySelector('#circle4');
+var circle5 = document.querySelector('#circle5');
+var circle6 = document.querySelector('#circle6');
+var circle7 = document.querySelector('#circle7');
+var circle8 = document.querySelector('#circle8');
 
 var els = [{
-    slide: secondSlide,
-    speed: 0.3
+    slide: circle1,
+    speed: 0.03
 }, {
-    slide: thirdSlide,
-    speed: 0.5
+    slide: circle2,
+    speed: 0.1
 }, {
-    slide: fourthSlide,
-    speed: 0.7
+    slide: circle3,
+    speed: 0.015
 }, {
-    slide: fifthSlide,
-    speed: 0.9
+    slide: circle4,
+    speed: 0.066
 }, {
-    slide: sixthSlide,
-    speed: 1
+    slide: circle5,
+    speed: 0.01
 }, {
-    slide: seventhSlide,
-    speed: 1.1
+    slide: circle6,
+    speed: 0.08
+}, {
+    slide: circle7,
+    speed: 0.07
+}, {
+    slide: circle8,
+    speed: 0.05
 }];
 
 window.addEventListener('scroll', onScroll);
@@ -33,7 +41,7 @@ function update() {
 
     els.forEach(function (el) {
         var elementPos = (el.slide.offsetTop * pageYOffset) / 100 * (-1);
-        el.slide.style.transform = 'translateY(' + (elementPos * el.speed / 100) + '%)';
+        el.slide.style.transform = 'translateY(' + (elementPos * el.speed) + 'px)';
     });
     ticking = false;
 
