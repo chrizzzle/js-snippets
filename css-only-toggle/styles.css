@@ -1,0 +1,47 @@
+.accordion {
+    padding: 20px;
+}
+
+.accordion__panel {
+    overflow: hidden;
+    transition-property: max-height;
+    transition-duration: 0.5s;
+}
+
+.accordion__checkbox ~ .accordion__panel {
+    max-height: 0;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0, 1.05, 0, 1);
+}
+
+.accordion__checkbox:checked ~ .accordion__panel {
+    max-height: 10000px;
+    transition-timing-function: cubic-bezier(1,.01,1,-0.04);
+}
+
+.accordion__checkbox {
+    visibility: hidden;
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.accordion__label {
+    display: block;
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.accordion__label:before {
+    content: '►';
+    margin-right: 10px;
+}
+
+.accordion__checkbox:checked ~ .accordion__label {
+    font-weight: bold;
+}
+
+.accordion__checkbox:checked ~ .accordion__label:before {
+    content: '▼';
+}
