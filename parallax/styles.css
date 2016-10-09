@@ -13,6 +13,8 @@
     width: 100px;
     height: 100px;
     position: absolute;
+    transition-property: transform;
+    transition-duration: 500ms;
 }
 
 #circle1 {

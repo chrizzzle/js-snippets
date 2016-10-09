@@ -10,7 +10,7 @@ var circle8 = document.querySelector('#circle8');
 
 var els = [{
     slide: circle1,
-    speed: 0.03
+    speed: -3
 }, {
     slide: circle2,
     speed: 0.1
