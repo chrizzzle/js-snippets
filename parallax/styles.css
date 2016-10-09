@@ -1,0 +1,38 @@
+.slide {
+    height: 500px;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 24px;
+    margin: 20px;
+}
+
+.first {
+    background-color: lightblue;
+}
+
+.second {
+    background-color: lightcoral;
+    transform: translateY(0);
+    /*transition: transform;*/
+    /*transition-duration: 0.2s;*/
+}
+
+.third {
+    background-color: lightcyan;
+}
+
+.fourth {
+    background-color: lightgoldenrodyellow;
+}
+
+.fifth {
+    background-color: lightgreen;
+}
+
+.sixth {
+    background-color: lightpink;
+}
+
+.seventh {
+    background-color: lightsalmon;
+}
